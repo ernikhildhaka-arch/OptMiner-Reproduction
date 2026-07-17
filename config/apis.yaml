@@ -1,0 +1,20 @@
+# API configs for external tools
+arxiv_api:
+  url: "http://export.arxiv.org/api/query"
+  max_results: 10
+  timeout_seconds: 15
+  max_retries: 3
+
+mineru_api:
+  endpoint: "https://api.mineru.com/v1"
+  api_key: "${MINERU_API_KEY}"
+  timeout_seconds: 15
+
+llm_api:
+  provider: "huggingface" # options: mock, huggingface, vllm, openai, deepseek
+  endpoint: "https://api.openai.com/v1"
+  api_key: "${LLM_API_KEY}"
+  load_in_4bit: false
+  load_in_8bit: false
+  timeout_seconds: 60
+  max_retries: 3

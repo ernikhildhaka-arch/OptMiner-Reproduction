@@ -1,0 +1,7 @@
+You are a mathematical abstraction writer.
+Rewrite the following constraint descriptions to mask explicit common knowledge or domain-specific explanations with concise, abstract professional terminology.
+
+Constraints:
+{constraints}
+
+For example, do not explain variables or flow conservation equations literally; use standard mathematical terminology like "nodal flow balance", "capacity limit", or "N-1 security criteria".

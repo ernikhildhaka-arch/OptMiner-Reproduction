@@ -1,0 +1,11 @@
+# Configuration for backbone models
+backbone_model: "Qwen/Qwen2.5-0.5B-Instruct"
+summarization_model: "Qwen3-32B"
+synthesis_model: "DeepSeek-V3"
+
+generation_parameters:
+  temperature: 0.0
+  top_p: 0.8
+  top_k: 20
+  max_tokens: 4096
+  greedy_decoding: true

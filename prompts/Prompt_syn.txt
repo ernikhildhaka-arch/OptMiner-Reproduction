@@ -1,0 +1,16 @@
+You are an expert optimization modeler.
+Synthesize a unified optimization problem by merging these two source problems.
+
+Base Problem 1 Scenario:
+{scenario_1}
+
+Base Problem 2 Scenario:
+{scenario_2}
+
+Merged Entities:
+{merged_entities}
+
+Merged Constraints:
+{merged_constraints}
+
+Draft a single, cohesive problem description that seamlessly incorporates both scenarios, all entities, and all constraints without structural contradictions.

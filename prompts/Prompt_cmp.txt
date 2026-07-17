@@ -1,0 +1,11 @@
+You are an expert operations research classifier.
+Compare the following two optimization problems and determine if they belong to the same industrial domain (e.g. logistics, manufacturing, portfolio optimization).
+
+Problem 1 Scenario Context:
+{scenario_1}
+
+Problem 2 Scenario Context:
+{scenario_2}
+
+Provide your classification exactly as:
+Domain Equivalent: Yes/No

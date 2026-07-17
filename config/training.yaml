@@ -1,0 +1,20 @@
+# Hyperparameters for R-GRPO training matching Table 9 in the paper
+epochs: 5
+batch_size: 128
+max_sequence_length: 8192
+max_prompt_length: 3300
+learning_rate: 1.0e-6
+optimizer: "AdamW"
+warmup_ratio: 0.05
+r_grpo:
+  group_size: 8
+  kl_coefficient: 0.01
+  clip_range: 0.2
+  reward_weights:
+    accuracy: 1.0
+    retrieval: 0.3
+
+# Data evolution settings
+evolution:
+  epsilon: 0.5
+

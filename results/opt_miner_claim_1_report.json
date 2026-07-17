@@ -1,0 +1,97 @@
+{
+    "summary": {
+        "total_count": 6,
+        "success_count": 0,
+        "pass_at_1_accuracy": 0.0,
+        "average_solver_runtime": 0.0,
+        "var_match_accuracy": 0.0,
+        "bin_match_accuracy": 0.0,
+        "cons_match_accuracy": 0.0
+    },
+    "runs": [
+        {
+            "problem_id": "mamo_1",
+            "dataset": "mamo_easy",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct",
+            "status": "No Code Generated",
+            "runtime": 0.0,
+            "objective_value": null,
+            "target_value": 10000.0,
+            "correct": false,
+            "var_match": false,
+            "bin_match": false,
+            "cons_match": false,
+            "errors": "Agent output did not contain python tags."
+        },
+        {
+            "problem_id": "mamo_1",
+            "dataset": "mamo_complex",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct",
+            "status": "No Code Generated",
+            "runtime": 0.0,
+            "objective_value": null,
+            "target_value": 57.0,
+            "correct": false,
+            "var_match": false,
+            "bin_match": false,
+            "cons_match": false,
+            "errors": "Agent output did not contain python tags."
+        },
+        {
+            "problem_id": "nl4opt_0",
+            "dataset": "nl4opt",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct",
+            "status": "No Code Generated",
+            "runtime": 0.0,
+            "objective_value": null,
+            "target_value": 1.0,
+            "correct": false,
+            "var_match": false,
+            "bin_match": false,
+            "cons_match": false,
+            "errors": "Agent output did not contain python tags."
+        },
+        {
+            "problem_id": "industryor_1",
+            "dataset": "industry_or",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct",
+            "status": "No Code Generated",
+            "runtime": 0.0,
+            "objective_value": null,
+            "target_value": 219888.0,
+            "correct": false,
+            "var_match": false,
+            "bin_match": false,
+            "cons_match": false,
+            "errors": "Agent output did not contain python tags."
+        },
+        {
+            "problem_id": "resocratic_0",
+            "dataset": "resocratic",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct",
+            "status": "No Code Generated",
+            "runtime": 0.0,
+            "objective_value": null,
+            "target_value": 3600.0,
+            "correct": false,
+            "var_match": false,
+            "bin_match": false,
+            "cons_match": false,
+            "errors": "Agent output did not contain python tags."
+        },
+        {
+            "problem_id": "optmath_0",
+            "dataset": "optmath",
+            "model": "Qwen/Qwen2.5-0.5B-Instruct",
+            "status": "No Code Generated",
+            "runtime": 0.0,
+            "objective_value": null,
+            "target_value": 25.0,
+            "correct": false,
+            "var_match": false,
+            "bin_match": false,
+            "cons_match": false,
+            "errors": "Agent output did not contain python tags."
+        }
+    ]
+}

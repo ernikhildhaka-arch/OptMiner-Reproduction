@@ -1,0 +1,16 @@
+You are an expert optimization systems architect.
+Adapt the following mathematical constraints and entities from a source domain to a target domain.
+
+Source Scenario:
+{source_scenario}
+
+Target Scenario Context:
+{target_scenario}
+
+Source Entities:
+{source_entities}
+
+Source Constraints:
+{source_constraints}
+
+Rewrite the source entities to align with the target domain's physical context while preserving their mathematical attributes. Apply the source constraints to these newly adapted entities.

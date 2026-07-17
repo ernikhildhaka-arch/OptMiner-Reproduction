@@ -1,0 +1,12 @@
+# Evaluation parameters
+metrics:
+  - "pass_at_1"
+  - "structural_alignment"
+  - "solver_objective"
+
+gurobi_solver:
+  timeout_seconds: 30
+  numerical_tolerance: 1.0e-5
+  verbose: false
+
+evaluation_seeds: [42, 100, 2026]

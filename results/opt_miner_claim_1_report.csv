@@ -1,0 +1,7 @@
+problem_id,dataset,model,status,runtime,objective_value,target_value,correct,var_match,bin_match,cons_match,errors
+mamo_1,mamo_easy,Qwen/Qwen2.5-0.5B-Instruct,No Code Generated,0.0,,10000.0,False,False,False,False,Agent output did not contain python tags.
+mamo_1,mamo_complex,Qwen/Qwen2.5-0.5B-Instruct,No Code Generated,0.0,,57.0,False,False,False,False,Agent output did not contain python tags.
+nl4opt_0,nl4opt,Qwen/Qwen2.5-0.5B-Instruct,No Code Generated,0.0,,1.0,False,False,False,False,Agent output did not contain python tags.
+industryor_1,industry_or,Qwen/Qwen2.5-0.5B-Instruct,No Code Generated,0.0,,219888.0,False,False,False,False,Agent output did not contain python tags.
+resocratic_0,resocratic,Qwen/Qwen2.5-0.5B-Instruct,No Code Generated,0.0,,3600.0,False,False,False,False,Agent output did not contain python tags.
+optmath_0,optmath,Qwen/Qwen2.5-0.5B-Instruct,No Code Generated,0.0,,25.0,False,False,False,False,Agent output did not contain python tags.

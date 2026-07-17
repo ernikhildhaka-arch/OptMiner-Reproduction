@@ -1,0 +1,15 @@
+# Dataset path maps and general splits
+paths:
+  nl4opt: "datasets/nl4opt"
+  mamo: "datasets/mamo"
+  industry_or: "datasets/industry_or"
+  resocratic: "datasets/resocratic"
+  optmath: "datasets/optmath"
+  opt_miner_bench: "datasets/opt_miner_bench"
+
+splits:
+  train: "train.json"
+  val: "val.json"
+  test: "test.json"
+
+random_seed: 42

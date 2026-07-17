@@ -1,0 +1,150 @@
+[
+    {
+        "problem_name": "Urban_Logistics_V1_UNION_ColdChain_Logistics_V1",
+        "domain": "Logistics",
+        "scenario_context": "A company needs to deliver goods to 10 customers within urban time windows.\nAdditionally: A distributor must deliver perishable goods while maintaining strict temperature controls.",
+        "objective": "Multi-objective: Minimize total travel time. and Minimize energy cost for cooling while routing.",
+        "entities": [
+            {
+                "name": "DeliveryVan",
+                "attributes": [
+                    "Mover",
+                    "Capacity",
+                    "Time"
+                ],
+                "description": "Standard delivery van"
+            },
+            {
+                "name": "RefrigeratedTruck",
+                "attributes": [
+                    "Mover",
+                    "Capacity",
+                    "Temp",
+                    "Time"
+                ],
+                "description": "Truck for cold goods"
+            }
+        ],
+        "constraints": [
+            {
+                "name": "TimeWindow",
+                "description": "Deliveries must occur within operating hours.",
+                "related_entities": [
+                    "DeliveryVan"
+                ],
+                "math": "sum(x_i) <= max_hours"
+            },
+            {
+                "name": "TemperatureControl",
+                "description": "Goods must remain below 4C.",
+                "related_entities": [
+                    "RefrigeratedTruck"
+                ],
+                "math": "temp_t <= 4"
+            }
+        ],
+        "retrieval_evidence": [
+            "Cold Chain Vehicle Routing Problem",
+            "Vehicle Routing Problem with Time Windows (VRPTW)"
+        ]
+    },
+    {
+        "problem_name": "ColdChain_Logistics_V1_TRANSFERRED_TO_Factory_Assembly_V1",
+        "domain": "Manufacturing",
+        "scenario_context": "Target Base: A factory needs to schedule batches on an assembly line with thermal processing.\nTransferred Logic: A distributor must deliver perishable goods while maintaining strict temperature controls.",
+        "objective": "Maximize daily throughput.",
+        "entities": [
+            {
+                "name": "AssemblyLine",
+                "attributes": [
+                    "Mover",
+                    "Capacity",
+                    "Temp",
+                    "Time"
+                ],
+                "description": "Factory conveyor belt"
+            },
+            {
+                "name": "RefrigeratedTruck",
+                "attributes": [
+                    "Mover",
+                    "Capacity",
+                    "Temp",
+                    "Time"
+                ],
+                "description": "Truck for cold goods"
+            }
+        ],
+        "constraints": [
+            {
+                "name": "Throughput",
+                "description": "Line must process 50 units/hr.",
+                "related_entities": [
+                    "AssemblyLine"
+                ],
+                "math": "rate >= 50"
+            },
+            {
+                "name": "TemperatureControl",
+                "description": "Goods must remain below 4C.",
+                "related_entities": [
+                    "RefrigeratedTruck"
+                ],
+                "math": "temp_t <= 4"
+            }
+        ],
+        "retrieval_evidence": [
+            "Cold Chain Vehicle Routing Problem",
+            "Job Shop Scheduling"
+        ]
+    },
+    {
+        "problem_name": "Urban_Logistics_V1_UNION_ColdChain_Logistics_V1_FOGGED",
+        "domain": "Logistics",
+        "scenario_context": "[FOGGED] A company needs to deliver goods to 10 customers within urban time windows.\nAdditionally: A distributor must deliver perishable goods while maintaining strict temperature controls.",
+        "objective": "Multi-objective: Minimize total travel time. and Minimize energy cost for cooling while routing.",
+        "entities": [
+            {
+                "name": "DeliveryVan",
+                "attributes": [
+                    "Mover",
+                    "Capacity",
+                    "Time"
+                ],
+                "description": "Standard delivery van"
+            },
+            {
+                "name": "RefrigeratedTruck",
+                "attributes": [
+                    "Mover",
+                    "Capacity",
+                    "Temp",
+                    "Time"
+                ],
+                "description": "Truck for cold goods"
+            }
+        ],
+        "constraints": [
+            {
+                "name": "TimeWindow",
+                "description": "[FOGGED] Deliveries must occur within operating hours.",
+                "related_entities": [
+                    "DeliveryVan"
+                ],
+                "math": "sum(x_i) <= max_hours"
+            },
+            {
+                "name": "TemperatureControl",
+                "description": "[FOGGED] Goods must remain below 4C.",
+                "related_entities": [
+                    "RefrigeratedTruck"
+                ],
+                "math": "temp_t <= 4"
+            }
+        ],
+        "retrieval_evidence": [
+            "Cold Chain Vehicle Routing Problem",
+            "Vehicle Routing Problem with Time Windows (VRPTW)"
+        ]
+    }
+]
