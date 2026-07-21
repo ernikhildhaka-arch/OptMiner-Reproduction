@@ -153,25 +153,36 @@ class HuggingFaceClient(BaseLLMClient):
         import torch
         from transformers import AutoTokenizer, AutoModelForCausalLM
         
+        # Read HF token explicitly so transformers can authenticate with gated models
+        hf_token = os.environ.get("HF_TOKEN") or os.environ.get("HUGGINGFACE_HUB_TOKEN") or None
+        
         self.device = self.device_override or ("cuda" if torch.cuda.is_available() else "cpu")
         print(f"[HuggingFaceClient] Loading {self.model_name} on {self.device}...")
+        if hf_token:
+            print(f"[HuggingFaceClient] Using HF_TOKEN for authentication.")
         
-        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            self.model_name,
+            token=hf_token
+        )
         
         kwargs = {}
+        if hf_token:
+            kwargs["token"] = hf_token
         if self.device == "cuda":
+            from transformers import BitsAndBytesConfig
             if self.load_in_4bit:
-                kwargs["load_in_4bit"] = True
+                kwargs["quantization_config"] = BitsAndBytesConfig(load_in_4bit=True)
                 kwargs["device_map"] = "auto"
             elif self.load_in_8bit:
-                kwargs["load_in_8bit"] = True
+                kwargs["quantization_config"] = BitsAndBytesConfig(load_in_8bit=True)
                 kwargs["device_map"] = "auto"
             else:
                 kwargs["torch_dtype"] = torch.float16
                 kwargs["device_map"] = "auto"
         else:
             kwargs["torch_dtype"] = torch.float32
-            
+
         self.model = AutoModelForCausalLM.from_pretrained(
             self.model_name,
             **kwargs

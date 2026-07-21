@@ -1,5 +1,5 @@
 # Configuration for backbone models
-backbone_model: "Qwen/Qwen2.5-0.5B-Instruct"
+backbone_model: "Qwen/Qwen3-8B-Instruct"
 summarization_model: "Qwen3-32B"
 synthesis_model: "DeepSeek-V3"
 

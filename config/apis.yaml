@@ -15,6 +15,6 @@ llm_api:
   endpoint: "https://api.openai.com/v1"
   api_key: "${LLM_API_KEY}"
   load_in_4bit: false
-  load_in_8bit: false
+  load_in_8bit: true
   timeout_seconds: 60
   max_retries: 3
