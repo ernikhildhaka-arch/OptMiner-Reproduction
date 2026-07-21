@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.conda/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# HuggingFace model cache (very large - don't commit)
+*.safetensors
+*.bin
+*.pt
+*.pth
+hf_cache/
+
+# Temporary/scratch deployment scripts
+remote_setup.sh
+remote_deploy.py
+patch_model_id.py
+analyze_results.py
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets - NEVER commit API keys
+*.env
+.env
+secrets.yaml
+
+# Large log files (keep claim1_run.log as it's our evidence)
+nohup.out
